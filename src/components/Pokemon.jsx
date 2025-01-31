@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 function Pokemon({ name }) {
   const [pokemon, setPokemons] = useState(null);
@@ -22,7 +23,7 @@ function Pokemon({ name }) {
   return (
     <div>
       {pokemon && (
-        <div className="p-3 border-2 flex flex-col w-fit">
+        <div className="p-3 border-2 rounded-2xl flex flex-col w-fit hover:bg-red-300 hover:cursor-pointer m-4">
           <img
             src={pokemon.sprites.front_default}
             alt={pokemon.forms[0].name}
@@ -34,5 +35,9 @@ function Pokemon({ name }) {
     </div>
   );
 }
+
+Pokemon.propTypes = {
+  name: PropTypes.string.isRequired,
+};
 
 export default Pokemon;
