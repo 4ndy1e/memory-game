@@ -24,6 +24,7 @@ function App() {
             <Pokemon name={name} key={name} />
           ))}
         </div>
+        <p> hi </p>
       </div>
     </div>
   );
