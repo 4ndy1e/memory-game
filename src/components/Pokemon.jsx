@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 function Pokemon({ name }) {
-  const [pokemon, setPokemons] = useState(null);
+  const [pokemon, setPokemon] = useState(null);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -16,7 +16,7 @@ function Pokemon({ name }) {
       })
       .then((data) => {
         console.log(data);
-        setPokemons(data);
+        setPokemon(data);
       })
       .catch((error) => {
         console.log(error);
