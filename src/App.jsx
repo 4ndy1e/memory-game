@@ -24,9 +24,6 @@ function App() {
             <Pokemon name={name} key={name} />
           ))}
         </div>
-        {/* {pokemons.map((pokemons) => (
-          <p key={pokemons.name}> {pokemons.name} </p>
-        ))} */}
       </div>
     </div>
   );
