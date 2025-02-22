@@ -20,3 +20,9 @@ h1 {
   line-height: 1.1;
   @apply font-semibold text-left;
 }
+
+h2 {
+  font-size: 2.5em;
+  line-height: 1.1;
+  @apply font-semibold text-left;
+}

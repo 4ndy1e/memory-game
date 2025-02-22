@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-function Pokemon({ name }) {
+function Pokemon({ name, onClick }) {
   const [pokemon, setPokemon] = useState(null);
 
   useEffect(() => {
@@ -33,9 +33,7 @@ function Pokemon({ name }) {
       {pokemon && (
         <div
           className="p-3 border-2 rounded-2xl flex flex-col w-fit hover:bg-red-300 hover:cursor-pointer m-4"
-          onClick={() => {
-            console.log({ name });
-          }}
+          onClick={onClick}
         >
           <img
             src={pokemon.sprites.front_default}
@@ -51,6 +49,7 @@ function Pokemon({ name }) {
 
 Pokemon.propTypes = {
   name: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequried,
 };
 
 export default Pokemon;
