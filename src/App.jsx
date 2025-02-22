@@ -27,7 +27,6 @@ function App() {
   ]);
   const [score, setScore] = useState(0);
   const [pokemonSet, setPokemonSet] = useState(new Set());
-  const [lost, setLost] = useState(false);
 
   function checkUserPick(pokemonName) {
     if (pokemonSet.has(pokemonName)) {
@@ -68,12 +67,6 @@ function App() {
             />
           ))}
         </div>
-        <button
-          className="bg-red-500 border-2 p-4 rounded-2xl hover:cursor-pointer"
-          onClick={() => setNames(shuffleArray(names))}
-        >
-          randomize
-        </button>
       </div>
     </div>
   );
