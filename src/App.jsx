@@ -63,6 +63,7 @@ function App() {
                 console.log("clicked");
                 setScore((score) => score + 1);
                 checkUserPick(name);
+                setNames(shuffleArray(names));
               }}
             />
           ))}
