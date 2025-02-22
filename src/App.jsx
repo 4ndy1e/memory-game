@@ -27,18 +27,26 @@ function App() {
   ]);
   const [score, setScore] = useState(0);
   const [pokemonSet, setPokemonSet] = useState(new Set());
+  const [lost, setLost] = useState(false);
 
   function checkUserPick(pokemonName) {
     if (pokemonSet.has(pokemonName)) {
-      console.log("LOST");
+      alert("YOU LOST. YOU ENDED WITH A SCORE OF " + score);
+      restartGame();
     } else {
       // create new set with added pokemon
       let newPokemonSet = new Set(pokemonSet);
       newPokemonSet.add(pokemonName);
 
       setPokemonSet(newPokemonSet);
-      console.log("added " + pokemonName);
     }
+  }
+
+  function restartGame() {
+    // reset score and clear pokemon set
+    setScore(0);
+
+    setPokemonSet(new Set());
   }
 
   return (
