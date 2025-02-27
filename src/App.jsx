@@ -1,5 +1,5 @@
 import "./App.css";
-import Pokemon from "./components/pokemon";
+import Pokemon from "./components/Pokemon";
 import { useState } from "react";
 
 // creates a new array with shuffled values from original array
